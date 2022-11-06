@@ -38,12 +38,13 @@ function Display() {
         }
         //What to do if the user enters alphanumeric data
         else if (isNaN(data)){
-            throw new Error('The value you entered is not a number!')
-            //alert('The value you entered is not a number!')
+            alert('The value you entered is not a number!')
+            throw new Error('NaN')
         }
         //What to do if the user enters a figure over 5000
         else {
             alert('You cannot count over 5000...')
+            throw new Error('Over 5000')
         }
     };
 
@@ -77,4 +78,13 @@ function Display() {
     )
 }
 
-export default Display;
+function Intro() {
+    return (
+        <div className='intro-container'>
+            <p className='welcome'>Welcome,</p>
+            <p className='intro'>Here, all that we do is count to 5000...</p>
+        </div>
+    )
+}
+
+export {Display, Intro};

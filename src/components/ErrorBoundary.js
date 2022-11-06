@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ErrorPage from './error';
 
 //Catches Errors and displays a fallback UI
 class ErrorBoundary extends Component {
@@ -8,11 +9,11 @@ class ErrorBoundary extends Component {
         this.state = {hasError: false}
     }
 
-    static
-    getDerivedStateFromError(error) {
+    
+    static getDerivedStateFromError(error) {
         //Update state so that it can render
         //the fallback UI
-        return { error };
+        return { hasError: true };
     }
 
     componentDidCatch(error, errorInfo) {
@@ -20,10 +21,12 @@ class ErrorBoundary extends Component {
         console.log(error, errorInfo);
     } 
 
-    render() {
+    render(error) {
         if (this.state.hasError) {
             return (
-                <section>Error 404</section>
+                <section>
+                    <ErrorPage error={error}/>
+                </section>
             )
         }
         return this.props.children;

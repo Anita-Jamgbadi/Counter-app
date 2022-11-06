@@ -2,13 +2,12 @@
     min-width: 100%;
     background-color: rgb(21, 3, 49);
     color: beige;
-    top: 0;
-    margin: 0 auto;
+    position: top;
 }
 
 .heading {
     font-weight: 800;
     text-align: left;
-    padding: 2%;
+    padding: 3%;
     text-decoration: wavy;
 }
