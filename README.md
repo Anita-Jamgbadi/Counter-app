@@ -1,3 +1,7 @@
+To view the deployed app, checkout:
+https://adorable-kulfi-1a970c.netlify.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
